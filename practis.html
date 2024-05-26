@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <div class="flex">
+    <div class="oll">
+      <div class="display">
+        <div class="information">
+          <em>Баланс: <span id="balans" class="balans_nomey"></span> лв.</em>
+          <em>Потенциална печалба: <span id="profit" class="curent_profit"></span> лв.</em>
+          <em>Залог: <span id="bet" class="bet_nomey"></span> лв.</em>
+          
+        </div>
+        <hr>
+
+        <p class="mesage" id="text_profit"></p>
+       
+      </div>
+
+
+      <div class="container" id="card_container">
+        
+        <div class="card" id="card1">
+
+          <div id="display_card1">
+            <img src="card1.png" alt="" style=" width: 100%; height: 250px;">
+          </div>
+
+          <div id="display_result1">
+            <spam class="pika" id="firstUpColor">♠️</spam>
+            <spam class="pika2" id="firstDownColor">♠️</spam>
+            <span class="k" id="firstUpType">K</span>
+            <span class="k1" id="firstDownType">K</span>
+          </div>
+
+        </div>
+
+
+        <div class="card" id="card1">
+
+          <div id="display_card2">
+            <img src="card1.png" alt="" style=" width: 100%; height: 250px;">
+          </div>
+
+          <div id="display_result2">
+            <spam class="pika" id="secondUpColor">♠️</spam>
+            <spam class="pika2" id="secondDownColor">♠️</spam>
+            <span class="k" id="secondUpType">K</span>
+            <span class="k1" id="secondDownType">K</span>
+          </div>
+
+        </div>
+
+
+        <div class="card" id="card1">
+
+          <div id="display_card3">
+            <img src="card1.png" alt="" style=" width: 100%; height: 250px;">
+          </div>
+
+          <div id="display_result3">
+            <spam class="pika" id="thirdUpColor">♠️</spam>
+            <spam class="pika2" id="thirdDownColor">♠️</spam>
+            <span class="k" id="thirdUpType">K</span>
+            <span class="k1" id="thirdDownType">K</span>
+          </div>
+
+        </div>
+
+
+        <div class="card" id="card1">
+
+          <div id="display_card4">
+            <img src="card1.png" alt="" style=" width: 100%; height: 250px;">
+          </div>
+
+          <div id="display_result4">
+            <spam class="pika" id="forthUpColor">♠️</spam>
+            <spam class="pika2" id="forthDownColor">♠️</spam>
+            <span class="k" id="forthUpType">K</span>
+            <span class="k1" id="forthDownType">K</span>
+          </div>
+
+        </div>
+
+
+        <div class="card" id="card1">
+
+          <div id="display_card5">
+            <img src="card1.png" alt="" style=" width: 100%; height: 250px;">
+          </div>
+
+          <div id="display_result5">
+            <spam class="pika" id="fiveUpColor">♠️</spam>
+            <spam class="pika2" id="fiveDownColor">♠️</spam>
+            <span class="k" id="fiveUpType">K</span>
+            <span class="k1" id="fiveDownType">K</span>
+          </div>
+
+        </div>
+
+        <div class="secretCard" id="reservCard">
+
+          <div id="display_card6">
+            <img src="card1.png" alt="" style=" width: 100%; height: 250px;">
+          </div>
+
+          <div id="display_result6">
+            <spam class="pika" id="sixUpColor">♠️</spam>
+            <spam class="pika2" id="sixDownColor">♠️</spam>
+            <span class="k" id="sixUpType">K</span>
+            <span class="k1" id="sixDownType">K</span>
+          </div>
+
+        </div>
+        <p class="text_for_lose" id="lose_text"></p>
+      </div>
+
+      <div class="button_container">
+        <button class="hold_button" id="holdButton1" disabled>HOLD</button>
+        <button class="hold_button" id="holdButton2" disabled>HOLD</button>
+        <button class="hold_button" id="holdButton3" disabled>HOLD</button>
+        <button class="hold_button" id="holdButton4" disabled>HOLD</button>
+        <button class="hold_button" id="holdButton5" disabled>HOLD</button>
+      </div>
+
+
+      <div class="button_container">
+        <button class="game_button" id="bet+1">Bet + 1</button>
+        <button class="game_button" id="bet-1">Bet - 1</button>
+        <button class="game_button" id="get_button">Get</button>
+        <button id="rollButton" class="roll_button"> R o l l </button>
+        <button class="game_button" id="black_button" onclick="blackAndRed('black')">Black</button>
+        <button class="game_button" id="red_button" onclick="blackAndRed('red')">Red</button>
+        <button class="play_button" id="row_button" onclick="play()"> PLAY </button>
+      </div>
+
+    </div>
+
+    <div class="oll2">
+      <h1 class="ruls">Печалби:</h1><hr>
+      <p>Чифт - печалба = залог х 2</p>
+      <p>Два чифта - печалба = залог х 3</p>
+      <p>Три еднакви - печалба = залог х 6</p>
+      <p>Стрейт флъш - печалба = залог х 30</p>
+      <p>Флъш - печалба = залог х 20</p>
+      <p>Фул хаус - печалба = залог х 40</p>
+      <p>Каре - печалба = залог х 50</p>
+      <button class="saveButton" onclick="saveData()">Save Game</button>
+      <p>Бутон GET взема печалбата</p>
+      <p>Бутон Roll  отваря прозорец в който трябва да се познае черна или червена.</p>
+      <p>при правилен избор печалбата се удвоява</p>
+      <p>при неправилен избор печалбата се губи</p>
+    </div>
+  </div>
+ 
+  <script src="test.js"></script>
+</body>
+
+</html>
