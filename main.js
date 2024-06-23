@@ -320,7 +320,8 @@ rollButton.onclick = () => {
   });
   sixCardBack.style.display = 'block';
   sixCardFrond.style.display = 'none';
-  document.getElementById('reservCard').style.display = 'block'
+  document.getElementById('reservCard').style.display = 'block';
+   holdButton_visibility("grey", false)
 }
 
 
